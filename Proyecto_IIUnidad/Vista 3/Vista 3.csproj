@@ -2,10 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Vista_3</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.31" />
-  </ItemGroup>
 
 </Project>
