@@ -172,7 +172,12 @@ namespace Datos
             return elimino;
 
         }
+
+        public Task<bool> EliminarAsync(string v)
+        {
+            throw new NotImplementedException();
         }
+    }
     }
 
 

@@ -29,6 +29,7 @@ namespace Vista4
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.CodigoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,9 @@ namespace Vista4
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosdataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +67,7 @@ namespace Vista4
             this.CodigoTextBox.Enabled = false;
             this.CodigoTextBox.Location = new System.Drawing.Point(171, 38);
             this.CodigoTextBox.Name = "CodigoTextBox";
-            this.CodigoTextBox.Size = new System.Drawing.Size(100, 25);
+            this.CodigoTextBox.Size = new System.Drawing.Size(158, 25);
             this.CodigoTextBox.TabIndex = 1;
             this.CodigoTextBox.TextChanged += new System.EventHandler(this.CodigoTextBox_TextChanged);
             // 
@@ -82,7 +85,7 @@ namespace Vista4
             this.NombreTextBox.Enabled = false;
             this.NombreTextBox.Location = new System.Drawing.Point(171, 94);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(100, 25);
+            this.NombreTextBox.Size = new System.Drawing.Size(158, 25);
             this.NombreTextBox.TabIndex = 3;
             // 
             // label3
@@ -100,7 +103,7 @@ namespace Vista4
             this.ClaveTextBox.Location = new System.Drawing.Point(171, 136);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
-            this.ClaveTextBox.Size = new System.Drawing.Size(100, 25);
+            this.ClaveTextBox.Size = new System.Drawing.Size(158, 25);
             this.ClaveTextBox.TabIndex = 5;
             // 
             // label4
@@ -118,7 +121,7 @@ namespace Vista4
             this.CorreoTextBox.Enabled = false;
             this.CorreoTextBox.Location = new System.Drawing.Point(171, 186);
             this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(100, 25);
+            this.CorreoTextBox.Size = new System.Drawing.Size(158, 25);
             this.CorreoTextBox.TabIndex = 7;
             // 
             // label5
@@ -190,34 +193,41 @@ namespace Vista4
             this.button2.TabIndex = 14;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(415, 286);
+            this.button3.Location = new System.Drawing.Point(510, 286);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 15;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(511, 286);
+            this.button4.Location = new System.Drawing.Point(418, 286);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 16;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(618, 284);
+            this.button5.Location = new System.Drawing.Point(611, 286);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 17;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // UsuariosForm
             // 
@@ -247,6 +257,7 @@ namespace Vista4
             this.Text = "UsuariosForm";
             this.Load += new System.EventHandler(this.UsuariosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosdataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +283,6 @@ namespace Vista4
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
