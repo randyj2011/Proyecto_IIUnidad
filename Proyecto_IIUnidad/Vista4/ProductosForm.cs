@@ -43,6 +43,17 @@ namespace Vista4
             button1.Enabled = true;
         }
 
+        private void LimpiarControles()
+        {
+            CodigoTextBox.Clear();
+            DescripcionTextBox.Clear();
+            PrecioTextBox.Clear();
+            ExistenciaTextBox.Clear();
+            FechadateTimePicker.Value = DateTime.Now;
+            ImagenPictureBox1.Image = null;
+            
+        }
+
         private void DesHabilitarControles()
         {
             CodigoTextBox.Enabled = false;
@@ -58,6 +69,14 @@ namespace Vista4
         {
             tipoOperacion = "Nuevo";
             HabilitarControles();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(CodigoTextBox.Text))
+            {
+
+            }
         }
     }
 }
