@@ -25,5 +25,11 @@ namespace Vista4
             UsuariosForm usuariosform = new UsuariosForm();
             usuariosform.Show();
         }
+
+        private void listaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosForm productosForm = new ProductosForm();
+            productosForm.Show();
+        }
     }
 }

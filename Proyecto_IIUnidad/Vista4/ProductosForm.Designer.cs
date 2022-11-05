@@ -29,6 +29,7 @@ namespace Vista4
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.CodigoTextBox = new System.Windows.Forms.TextBox();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
@@ -47,8 +48,10 @@ namespace Vista4
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.ProductodataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductodataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +95,8 @@ namespace Vista4
             this.ExistenciaTextBox.Name = "ExistenciaTextBox";
             this.ExistenciaTextBox.Size = new System.Drawing.Size(188, 25);
             this.ExistenciaTextBox.TabIndex = 5;
+            this.ExistenciaTextBox.TextChanged += new System.EventHandler(this.ExistenciaTextBox_TextChanged);
+            this.ExistenciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExistenciaTextBox_KeyPress);
             // 
             // label3
             // 
@@ -109,6 +114,7 @@ namespace Vista4
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(188, 25);
             this.PrecioTextBox.TabIndex = 7;
+            this.PrecioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioTextBox_KeyPress);
             // 
             // label4
             // 
@@ -144,6 +150,7 @@ namespace Vista4
             this.ImagenPictureBox1.Location = new System.Drawing.Point(330, 36);
             this.ImagenPictureBox1.Name = "ImagenPictureBox1";
             this.ImagenPictureBox1.Size = new System.Drawing.Size(338, 228);
+            this.ImagenPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox1.TabIndex = 10;
             this.ImagenPictureBox1.TabStop = false;
             // 
@@ -156,6 +163,7 @@ namespace Vista4
             this.button1.TabIndex = 11;
             this.button1.Text = "Adjuntar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -184,6 +192,7 @@ namespace Vista4
             this.button3.TabIndex = 20;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -193,6 +202,7 @@ namespace Vista4
             this.button2.TabIndex = 19;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
@@ -215,6 +225,10 @@ namespace Vista4
             this.ProductodataGridView.RowTemplate.Height = 25;
             this.ProductodataGridView.Size = new System.Drawing.Size(810, 152);
             this.ProductodataGridView.TabIndex = 23;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ProductosForm
             // 
@@ -245,6 +259,7 @@ namespace Vista4
             this.Load += new System.EventHandler(this.ProductosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductodataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +285,6 @@ namespace Vista4
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView ProductodataGridView;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
